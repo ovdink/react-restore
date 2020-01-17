@@ -1,5 +1,5 @@
 import React from 'react';
-import Api from '../../services/fake-api';
+import Api from '../../services/bookstore-service';
 
 import Spinner from '../Spinner';
 import ErrorBoundary from '../Error-boundary';

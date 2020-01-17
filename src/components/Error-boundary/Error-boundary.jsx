@@ -8,7 +8,6 @@ const ErrorBoundary = (props) => {
   const [hasError, setError] = useState(false);
 
   useEffect(() => {
-    console.log(hasError);
     return setError(true);
   }, [hasError]);
 
