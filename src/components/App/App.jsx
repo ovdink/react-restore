@@ -1,19 +1,29 @@
 import React from 'react';
-import Api from '../../services/bookstore-service';
+import { Route, Link, Switch } from 'react-router-dom';
+import { WithBookstoreService } from '../Hoc';
+import { HomePage, CartPage } from '../../pages';
 
 import Spinner from '../Spinner';
-import ErrorBoundary from '../Error-boundary';
 
 import './App.scss';
 
 const App = () => {
-  const api = new Api();
   return (
     <div className="app">
-      <Spinner />
-      <ErrorBoundary />
+      <ul className="header">
+        <Link to="/">
+          <li>Home</li>
+        </Link>
+        <Link to="/cart">
+          <li>Cart</li>
+        </Link>
+      </ul>
+      <Switch>
+        <Route path="/" component={HomePage} exact />
+        <Route path="/cart" component={CartPage} />
+      </Switch>
     </div>
   );
 };
 
-export default App;
+export default WithBookstoreService()(App);

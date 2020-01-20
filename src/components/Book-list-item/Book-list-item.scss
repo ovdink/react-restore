@@ -1,0 +1,12 @@
+.book-list-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 20px;
+
+  & span {
+    width: 50%;
+    text-align: center;
+  }
+}
