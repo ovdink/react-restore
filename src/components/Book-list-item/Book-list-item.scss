@@ -1,12 +1,37 @@
 .book-list-item {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   background: #fff;
-  margin-bottom: 20px;
+  max-width: 600px;
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 10px;
 
-  & span {
-    width: 50%;
-    text-align: center;
+  &__image img {
+    width: 200px;
+  }
+
+  &__details {
+    width: 300px;
+  }
+
+  &__title {
+    color: rgb(0, 103, 144);
+    font-size: 19px;
+    // text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  &__author {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
   }
 }

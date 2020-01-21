@@ -4,8 +4,10 @@ import BookList from '../components/Book-list';
 const HomePage = () => {
   return (
     <>
-      <h1>Welcome to ReStore!</h1>
-      <BookList />
+      <div className="container">
+        <h1>Welcome to ReStore!</h1>
+        <BookList />
+      </div>
     </>
   );
 };
