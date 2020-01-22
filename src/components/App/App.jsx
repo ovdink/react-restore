@@ -1,23 +1,16 @@
 import React from 'react';
-import { Route, Link, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { WithBookstoreService } from '../Hoc';
 import { HomePage, CartPage } from '../../pages';
 
-import Spinner from '../Spinner';
+import Header from '../Header';
 
 import './App.scss';
 
 const App = () => {
   return (
     <div className="app">
-      <ul className="header">
-        <Link to="/">
-          <li>Home</li>
-        </Link>
-        <Link to="/cart">
-          <li>Cart</li>
-        </Link>
-      </ul>
+      <Header numItems={2} total={1500} />
       <Switch>
         <Route path="/" component={HomePage} exact />
         <Route path="/cart" component={CartPage} />

@@ -1,0 +1,42 @@
+@import '../../fonts/fonts';
+
+.header {
+  width: 100%;
+  //   position: fixed;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  background: rgb(1, 70, 58);
+
+  &__logo {
+    font-family: 'Amithen';
+    color: #fff;
+    font-size: 3rem;
+    padding-left: 1rem;
+
+    &:hover {
+      color: rgb(29, 187, 29);
+      text-shadow: -1px 0 cyan, 0 1px cyan, 1px 0 cyan, 0 -1px cyan;
+    }
+  }
+
+  &__cart-icon {
+    font-family: 'Helvetica';
+    color: #fff !important;
+    font-size: 1.3rem;
+    user-select: none;
+  }
+
+  .fa-shopping-cart {
+    margin-right: 10px;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: rgb(165, 231, 179);
+  }
+}
+
+a {
+  text-decoration: none !important;
+  margin: auto 10px;
+}
