@@ -6,14 +6,11 @@ import ErrorIndicator from '../Error-indicator';
 import { WithBookstoreService } from '../Hoc';
 import { fetchBooks, bookAddedToCart } from '../../actions/';
 import { compose } from '../../utils';
+// import { compose } from 'redux';
 
 import './Book-list.scss';
 
 const BookList = ({ books, onAddedToCart }) => {
-  // const onAddedToCart = () => {
-  //   console.log('added');
-  // };
-
   return books.map((book) => {
     return (
       <BookListItem
@@ -42,12 +39,8 @@ const BookListContainer = (props) => {
   return <BookList books={books} onAddedToCart={onAddedToCart} />;
 };
 
-const mapStateToProps = ({ books, loading, error }) => {
-  return {
-    books,
-    loading,
-    error
-  };
+const mapStateToProps = ({ bookList: { books, loading, error } }) => {
+  return { books, loading, error };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
